@@ -26,6 +26,7 @@
 
 #include "TcpServer.h"
 #include "TcpSocket.h"
+#include "LocalSocket.h"
 #include "QIntPtr.h"
 #include "TcpSocketFactory.h"
 #include "TcpSocketEnums.h"
@@ -35,6 +36,7 @@ namespace QMLTcpSockets{
 void QMLTcpSocketsPlugin::registerTypes(const char* uri){
     qmlRegisterType<TcpServer>(uri, 1, 0, "TcpServer");
     qmlRegisterType<TcpSocket>(uri, 1, 0, "TcpSocket");
+    qmlRegisterType<LocalSocket>(uri, 1, 0, "LocalSocket");
     qmlRegisterType<QIntPtr>(uri, 1, 0, "QIntPtr");
     qmlRegisterSingletonType<TcpSocketFactory>(uri, 1, 0, "TcpSocketFactory",
                                                [] (QQmlEngine* qmlEngine, QJSEngine* jsEngine)->QObject* {

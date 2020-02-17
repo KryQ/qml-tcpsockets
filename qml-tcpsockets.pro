@@ -18,6 +18,7 @@ TARGET = $$qtLibraryTarget($$TARGET)
 uri = QMLTcpSockets
 
 HEADERS += \
+    src/LocalSocket.h \
     src/QMLTcpSocketsPlugin.h \
     src/QIntPtr.h \
     src/QTcpServerPub.h \
@@ -27,6 +28,7 @@ HEADERS += \
     src/TcpSocketEnums.h
 
 SOURCES += \
+    src/LocalSocket.cpp \
     src/QMLTcpSocketsPlugin.cpp \
     src/QIntPtr.cpp \
     src/QTcpServerPub.cpp \
